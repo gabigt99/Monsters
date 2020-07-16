@@ -1,0 +1,13 @@
+3
+Monster 70 23 20 AMonster
+Dragon 290 16 18 Drodo
+Vampire 120 19 20 Vampi
+2
+Weapon 20 12
+Weapon 12 49
+4
+Shield 12 2
+Shield 1 43
+Shield 19 2
+Shield 8 10
+DirectElemination

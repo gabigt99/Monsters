@@ -1,0 +1,78 @@
+Pair 0 is: Dragon6 & Vampire6
+Winner is: Vampire6
+Pair 1 is: Dragon6 & ZomZombie3
+Winner is: Dragon6
+Pair 2 is: Dragon6 & Knight3
+Winner is: Dragon6
+Pair 3 is: Dragon6 & B3Monster
+Winner is: Dragon6
+Pair 4 is: Dragon6 & Dragon5
+Winner is: Dragon6
+Pair 5 is: Dragon6 & A3Monster
+Winner is: Dragon6
+Pair 6 is: Dragon6 & Zombie3
+Winner is: Dragon6
+Pair 7 is: Dragon6 & Vampire5
+Winner is: Dragon6
+Pair 8 is: Vampire6 & ZomZombie3
+Winner is: Vampire6
+Pair 9 is: Vampire6 & Knight3
+Winner is: Vampire6
+Pair 10 is: Vampire6 & B3Monster
+Winner is: Vampire6
+Pair 11 is: Vampire6 & Dragon5
+Winner is: Dragon5
+Pair 12 is: Vampire6 & A3Monster
+Winner is: Vampire6
+Pair 13 is: Vampire6 & Zombie3
+Winner is: Vampire6
+Pair 14 is: Vampire6 & Vampire5
+Winner is: Vampire6
+Pair 15 is: ZomZombie3 & Knight3
+Winner is: Knight3
+Pair 16 is: ZomZombie3 & B3Monster
+Winner is: No one
+Pair 17 is: ZomZombie3 & Dragon5
+Winner is: Dragon5
+Pair 18 is: ZomZombie3 & A3Monster
+Winner is: ZomZombie3
+Pair 19 is: ZomZombie3 & Zombie3
+Winner is: ZomZombie3
+Pair 20 is: ZomZombie3 & Vampire5
+Winner is: No one
+Pair 21 is: Knight3 & B3Monster
+Winner is: Knight3
+Pair 22 is: Knight3 & Dragon5
+Winner is: Dragon5
+Pair 23 is: Knight3 & A3Monster
+Winner is: Knight3
+Pair 24 is: Knight3 & Zombie3
+Winner is: Knight3
+Pair 25 is: Knight3 & Vampire5
+Winner is: Knight3
+Pair 26 is: B3Monster & Dragon5
+Winner is: Dragon5
+Pair 27 is: B3Monster & A3Monster
+Winner is: B3Monster
+Pair 28 is: B3Monster & Zombie3
+Winner is: B3Monster
+Pair 29 is: B3Monster & Vampire5
+Winner is: B3Monster
+Pair 30 is: Dragon5 & A3Monster
+Winner is: Dragon5
+Pair 31 is: Dragon5 & Zombie3
+Winner is: Dragon5
+Pair 32 is: Dragon5 & Vampire5
+Winner is: Dragon5
+Pair 33 is: A3Monster & Zombie3
+Winner is: A3Monster
+Pair 34 is: A3Monster & Vampire5
+Winner is: Vampire5
+Pair 35 is: Zombie3 & Vampire5
+Winner is: Vampire5
+==========ROUND1=============
+Pair 0 is: Dragon6 & Vampire6
+Winner is: Dragon6
+==========ROUND2=============
+Pair 0 is: Dragon5 & Dragon6
+Winner is: Dragon5

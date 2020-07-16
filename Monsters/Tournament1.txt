@@ -1,0 +1,20 @@
+==========ROUND1=============
+Pair 0 is: Zombie1 & A1Monster
+Winner is: Zombie1
+Pair 1 is: Vampire2 & Dragon2
+Winner is: Vampire2
+Pair 2 is: Dragon1 & Zom1Zombie
+Winner is: Dragon1
+Pair 3 is: B1Monster & Knight1
+Winner is: Knight1
+==========ROUND2=============
+Pair 0 is: Vampire1 & Zombie1
+Winner is: Vampire1
+Pair 1 is: Vampire2 & Dragon1
+Winner is: Vampire2
+==========ROUND3=============
+Pair 0 is: Knight1 & Vampire1
+Winner is: Knight1
+==========ROUND4=============
+Pair 0 is: Vampire2 & Knight1
+Winner is: Vampire2

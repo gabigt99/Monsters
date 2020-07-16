@@ -1,0 +1,17 @@
+﻿  pch.cpp
+  Arena.cpp
+  DirectElemination.cpp
+  Dragon.cpp
+  EverybodyVSeverybody.cpp
+  FighterWins.cpp
+  FightingPair.cpp
+  Knight.cpp
+  Mixed.cpp
+  Monsters.cpp
+  Shield.cpp
+  Tournament.cpp
+  Vampire.cpp
+  Weapon.cpp
+  Zombie.cpp
+  Generating Code...
+  Monsters.vcxproj -> D:\Университет\Gabi programi cpp\Monsters\x64\Debug\Monsters.exe

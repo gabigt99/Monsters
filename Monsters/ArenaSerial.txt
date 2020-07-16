@@ -1,0 +1,58 @@
+3
+1 Tournament1
+0
+9
+Zombie 80 24 12 bobi
+Monster 70 23 17 tobi
+Vampire 111 30 10 gobi
+Dragon 110 29 10 zlobi
+Dragon 90 35 9 grobi
+Zombie 29 21 34 Zom1Zombie
+Monster 93 24 23 B1Monster
+Knight 100 11 10 Knight1
+Vampire 100 21 23 Vampire1
+2
+Weapon 15 3
+Weapon 12 19
+2
+Shield 16 0
+Shield 12 6
+DirectElemination
+1 Tournament2
+1
+9
+Vampire 111 100 100 Vampire4
+Monster 93 24 23 B2Monster
+Monster 70 23 17 A2Monster
+Knight 100 100 100 Knight2
+Zombie 29 21 34 ZomZombie2
+Zombie 80 24 12 Zombie2
+Dragon 40 100 100 Dragon4
+Dragon 90 100 90 Dragon3
+Vampire 100 21 23 Vampire3
+2
+Weapon 12 0
+Weapon 15 0
+2
+Shield 12 0
+Shield 16 0
+EverybodyVSeverybody
+1 Tournament3
+1
+9
+Dragon 110 120 100 Dragon6
+Vampire 80 92 69 Vampire6
+Zombie 29 21 34 ZomZombie3
+Knight 100 100 100 Knight3
+Monster 93 24 23 B3Monster
+Dragon 110 120 100 Dragon5
+Monster 70 23 17 A3Monster
+Zombie 80 24 12 Zombie3
+Vampire 100 21 23 Vampire5
+2
+Weapon 100 13
+Weapon 150 3
+2
+Shield 120 10
+Shield 160 3
+Mixed

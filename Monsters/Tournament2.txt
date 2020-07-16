@@ -1,0 +1,72 @@
+Pair 0 is: Vampire4 & B2Monster
+Winner is: Vampire4
+Pair 1 is: Vampire4 & A2Monster
+Winner is: Vampire4
+Pair 2 is: Vampire4 & Knight2
+Winner is: No one
+Pair 3 is: Vampire4 & ZomZombie2
+Winner is: Vampire4
+Pair 4 is: Vampire4 & Zombie2
+Winner is: Vampire4
+Pair 5 is: Vampire4 & Dragon4
+Winner is: No one
+Pair 6 is: Vampire4 & Dragon3
+Winner is: Vampire4
+Pair 7 is: Vampire4 & Vampire3
+Winner is: Vampire4
+Pair 8 is: B2Monster & A2Monster
+Winner is: B2Monster
+Pair 9 is: B2Monster & Knight2
+Winner is: Knight2
+Pair 10 is: B2Monster & ZomZombie2
+Winner is: No one
+Pair 11 is: B2Monster & Zombie2
+Winner is: B2Monster
+Pair 12 is: B2Monster & Dragon4
+Winner is: Dragon4
+Pair 13 is: B2Monster & Dragon3
+Winner is: Dragon3
+Pair 14 is: B2Monster & Vampire3
+Winner is: B2Monster
+Pair 15 is: A2Monster & Knight2
+Winner is: Knight2
+Pair 16 is: A2Monster & ZomZombie2
+Winner is: ZomZombie2
+Pair 17 is: A2Monster & Zombie2
+Winner is: Zombie2
+Pair 18 is: A2Monster & Dragon4
+Winner is: Dragon4
+Pair 19 is: A2Monster & Dragon3
+Winner is: Dragon3
+Pair 20 is: A2Monster & Vampire3
+Winner is: Vampire3
+Pair 21 is: Knight2 & ZomZombie2
+Winner is: Knight2
+Pair 22 is: Knight2 & Zombie2
+Winner is: Knight2
+Pair 23 is: Knight2 & Dragon4
+Winner is: No one
+Pair 24 is: Knight2 & Dragon3
+Winner is: Knight2
+Pair 25 is: Knight2 & Vampire3
+Winner is: Knight2
+Pair 26 is: ZomZombie2 & Zombie2
+Winner is: ZomZombie2
+Pair 27 is: ZomZombie2 & Dragon4
+Winner is: Dragon4
+Pair 28 is: ZomZombie2 & Dragon3
+Winner is: Dragon3
+Pair 29 is: ZomZombie2 & Vampire3
+Winner is: No one
+Pair 30 is: Zombie2 & Dragon4
+Winner is: Dragon4
+Pair 31 is: Zombie2 & Dragon3
+Winner is: Dragon3
+Pair 32 is: Zombie2 & Vampire3
+Winner is: Vampire3
+Pair 33 is: Dragon4 & Dragon3
+Winner is: Dragon3
+Pair 34 is: Dragon4 & Vampire3
+Winner is: Dragon4
+Pair 35 is: Dragon3 & Vampire3
+Winner is: Dragon3

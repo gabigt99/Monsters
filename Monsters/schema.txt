@@ -1,0 +1,5 @@
+0
+3
+Vampire 122 23 12 Vampi 0 1 12 23
+Dragon 23 76 44 Dragi 1 22 32 0
+Zombie 23 43 89 Zoomy 1 23 43 1 92 12
