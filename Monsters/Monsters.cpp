@@ -25,12 +25,18 @@ Monster::Monster(int health, int attackPower, int armor, const char *name, Weapo
 	{
 		this->weapon = weapon;
 	}
-	else takeWeapon(weapon);
+	else
+	{
+		takeWeapon(weapon);
+	}
 	if (shield == NULL)
 	{
 		this->shield = shield;
 	}
-	else takeShield(shield);
+	else
+	{
+		takeShield(shield);
+	}
 }
 Monster::Monster(const Monster &other)
 {
@@ -107,13 +113,13 @@ void Monster::returnWeapon()
 		weapon->setIsTaken(0);
 		weapon = NULL;
 	}
-}
+}/*
 void Monster::restoreWeapon(istream& in)
 {
 	Weapon* weapon = new Weapon;
 	weapon->read(in);
 	this->takeWeapon(weapon);
-}
+}*/
 void Monster::takeShield(Shield* shield)
 {
 	if (this->shield != NULL)
@@ -152,13 +158,13 @@ void Monster::returnShield()
 		shield = NULL;
 	}
 }
-
+/*
 void Monster::restoreShield(istream & in)
 {
 	Shield* shield = new Shield;
 	shield->read(in);
 	takeShield(shield);
-}
+}*/
 
 const int Monster::getHealth()
 {

@@ -32,12 +32,12 @@ public:
 	virtual bool canUseWeapon();
 	bool isHaveWeapon() const;
 	void returnWeapon();
-	void restoreWeapon(istream& in);
+	//void restoreWeapon(istream& in);
 	void takeShield(Shield* s);
 	virtual bool canUseShield();
 	bool isHaveShield() const;
 	void returnShield();
-	void restoreShield(istream& in);
+	//void restoreShield(istream& in);
 	const int getHealth();
 	virtual const int getAttackPower();
 	virtual const int getArmor();
