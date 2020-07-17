@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "FightingPair.h"
+
 void FightingPair::execute(bool restoreLife) 
 {
 	if (restoreLife) 
@@ -11,14 +12,19 @@ void FightingPair::execute(bool restoreLife)
 		firstFighter->setHealth(lifeRememberFirst);
 		secondFighter->setHealth(lifeRememberSecond);
 	}
-	else winner = (*firstFighter).fight(*secondFighter);
+	else
+	{
+		winner = (*firstFighter).fight(*secondFighter);
+	}
 	executed = true;
 }
+
 FightingPair::FightingPair(Monster* first, Monster* second)
 {
 	firstFighter = first;
 	secondFighter = second;
 }
+
 Monster* FightingPair::getWinner()
 {
 	if (executed)

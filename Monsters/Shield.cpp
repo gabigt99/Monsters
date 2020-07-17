@@ -1,21 +1,23 @@
 #pragma once
 #include"pch.h"
 #include "Shield.h"
-void Shield::setProtection(int p)
+
+void Shield::setProtection(int protection)
 {
-	if (p < 0)
+	if (protection < 0)
 	{
-		p = 0;
+		protection = 0;
 	}
-	this->protection = p;
+	this->protection = protection;
 }
-void Shield::setDupability(int d)
+
+void Shield::setDupability(int dupability)
 {
-	if (d < 0)
+	if (dupability < 0)
 	{
-		d = 0;
+		dupability = 0;
 	}
-	this->dupability = d;
+	this->dupability = dupability;
 }
 
 void Shield::setIsTaken(bool isTaken)
@@ -30,6 +32,7 @@ int Shield::getProtection()
 {
 	return this->protection;
 }
+
 Shield * Shield::factory(string type)
 {
 	if (type == "Shield")
@@ -38,6 +41,7 @@ Shield * Shield::factory(string type)
 	}
 	return nullptr;
 }
+
 void Shield::read(istream & in)
 {
 	int protection, dupability;
@@ -45,11 +49,13 @@ void Shield::read(istream & in)
 	setProtection(protection);
 	setDupability(dupability);
 }
+
 void Shield::save(ostream & out)
 {
 	out << getType() << " ";
 	out << getProtection() << " " << getDupability() << endl;
 }
+
 int Shield::getDupability()
 {
 	return this->dupability;

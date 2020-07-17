@@ -22,4 +22,5 @@ private:
 	vector<Monster*> winners;
 	vector<FightingPair> pairs;
 	vector<FighterWins> fighersWithWins;
+	void fight(bool restoreLife, ostream* outHistory);
 };

@@ -15,7 +15,7 @@ const string Tournament::getType()
 	return "Tournament";
 }
 
-Tournament * Tournament::factory()
+Tournament * Tournament::factory()//евентуално за повече видове турнири
 {
 	return new Tournament();
 }
@@ -29,6 +29,7 @@ void Tournament::addWeapon(Weapon& weapon)
 {
 	weapons.push_back(&weapon);
 }
+
 void Tournament::addShield(Shield& shield)
 {
 	shields.push_back(&shield);
@@ -81,7 +82,10 @@ istream & Tournament::restoreOutHistory(istream & in)
 		ofstream* out = new ofstream(filename);
 		setOutHistory(out);
 	}
-	else setOutHistory(nullptr);
+	else
+	{
+		setOutHistory(nullptr);
+	}
 	return in;
 }
 
@@ -229,7 +233,10 @@ void Tournament::fight()
 		returnWeapons();
 		returnShields();
 	}
-	else cout << "It doesn't know which schema to use!!!" << endl;
+	else
+	{
+		cout << "It doesn't know which schema to use!!!" << endl;
+	}
 }
 
 void Tournament::giveWeapons()

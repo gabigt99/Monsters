@@ -22,6 +22,6 @@ private:
 	vector<Monster*> fighters;
 	vector<Monster*> winners;
 	vector<FightingPair> pairs;
-	void fight(bool restoreLife, ostream* outHistory);
+	void fight(bool restoreLife, ostream* outHistory, int numberOfRound);
 	virtual void addWinner(int i);
 };

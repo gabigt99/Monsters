@@ -10,14 +10,14 @@ using namespace std;
 class Weapon
 {
 public:
-	Weapon(int p = 0, int d = 0) //:power(p), dupability(d) {};
+	Weapon(int power = 0, int dupability = 0) //:power(p), dupability(d) {};
 	{
-		setPower(p);
-		setDupability(d);
+		setPower(power);
+		setDupability(dupability);
 		isTaken = false;
 	}
-	void setPower(int newPower);
-	void setDupability(int newDupability);
+	void setPower(int power);
+	void setDupability(int dupability);
 	void setIsTaken(bool isTaken);
 	int getPower();
 	int getDupability();

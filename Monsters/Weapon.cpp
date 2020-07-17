@@ -1,23 +1,24 @@
 #pragma once
 #include "pch.h"
 #include "Weapon.h"
-void Weapon::setPower(int newPower)
+
+void Weapon::setPower(int power)
 {
-	if (newPower < 0)
+	if (power < 0)
 	{
-		newPower = 0;
+		power = 0;
 	}
-	this->power = newPower;
-}
-void Weapon::setDupability(int newDupability)
-{
-	if (newDupability < 0)
-	{
-		newDupability = 0;
-	}
-	this->dupability = newDupability;
+	this->power = power;
 }
 
+void Weapon::setDupability(int dupability)
+{
+	if (dupability < 0)
+	{
+		dupability = 0;
+	}
+	this->dupability = dupability;
+}
 
 void Weapon::setIsTaken(bool isTaken)
 {
@@ -26,15 +27,16 @@ void Weapon::setIsTaken(bool isTaken)
 		this->isTaken = isTaken;
 	}
 }
+
 int Weapon::getPower()
 {
 	return power;
 }
+
 int Weapon::getDupability()
 {
 	return dupability;
 }
-
 
 bool Weapon::getIsTaken()
 {
@@ -73,6 +75,7 @@ bool Weapon::isUseable()
 {
 	return (getDupability() > 0);
 }
+
 bool Weapon::canBeTaken()
 {
 	return getDupability() > 0 && !getIsTaken();

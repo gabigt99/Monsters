@@ -4,7 +4,7 @@
 
 vector<Monster*> DirectElemination::startFight(vector<Monster*> monsters, bool restoreLife , ostream* outHistory)
 {
-	int counter = 1;
+	int numberOfRound = 0;
 	fighters = monsters;
 	if (fighters.size() == 1)
 	{
@@ -12,17 +12,13 @@ vector<Monster*> DirectElemination::startFight(vector<Monster*> monsters, bool r
 	}
 	while (fighters.size() != 1)
 	{
+		numberOfRound++;
 		getRound();
-		if (outHistory != nullptr)
-		{
-			*outHistory << "==========ROUND" << counter << "=============" << endl;
-			counter++;
-		}
 		if (fighters.size() % 2 != 0)
 		{
 			winners.push_back(fighters[fighters.size() - 1]);
 		}
-		fight(restoreLife, outHistory);
+		fight(restoreLife, outHistory, numberOfRound);
 		fighters = winners;
 		for (unsigned int i = 0; i < winners.size(); i++) // това е, за да се вид€, че работи адекватно, иначе не ни тр€бва
 		{
@@ -99,8 +95,12 @@ const string DirectElemination::getType()
 	return "DirectElemination";
 }
 
-void DirectElemination::fight(bool restoreLife, ostream * outHistory)
+void DirectElemination::fight(bool restoreLife, ostream * outHistory, int numberOfRound)
 {
+	if (outHistory != nullptr)
+	{
+		*outHistory << "==========ROUND" << numberOfRound << "=============" << endl;
+	}
 	for (unsigned int i = 0; i < pairs.size(); i++)
 	{
 		if (outHistory != nullptr)

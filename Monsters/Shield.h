@@ -10,14 +10,14 @@ using namespace std;
 class Shield
 {
 public:
-	Shield(int p = 0, int d = 0) 
+	Shield(int protection = 0, int dupability = 0)
 	{
-		setProtection(p);
-		setDupability(d);
+		setProtection(protection);
+		setDupability(dupability);
 		isTaken = false;
 	}
-	void setProtection(int p);
-	void setDupability(int d);
+	void setProtection(int protection);
+	void setDupability(int dupability);
 	void setIsTaken(bool isTaken);
 	int getProtection();
 	int getDupability();
