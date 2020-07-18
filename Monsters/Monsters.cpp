@@ -38,12 +38,12 @@ Monster::Monster(int health, int attackPower, int armor, const char *name, Weapo
 		takeShield(shield);
 	}
 }
+
 Monster::Monster(const Monster &other)
 {
 	name = NULL;
 	*this = other;
 }
-
 
 void Monster::setHealth(int health)
 {
@@ -53,6 +53,7 @@ void Monster::setHealth(int health)
 	}
 	this->health = health;
 }
+
 void Monster::setAttackPower(int attackPower)
 {
 	if (attackPower < 0)
@@ -61,6 +62,7 @@ void Monster::setAttackPower(int attackPower)
 	}
 	this->attackPower = attackPower;
 }
+
 void Monster::setArmor(int armor)
 {
 	if (armor < 0)
@@ -69,6 +71,7 @@ void Monster::setArmor(int armor)
 	}
 	this->armor = armor;
 }
+
 void Monster::setName(const char *name)
 {
 	if (this->name != NULL)
@@ -78,6 +81,7 @@ void Monster::setName(const char *name)
 	this->name = new char[strlen(name) + 1];
 	strcpy(this->name, name);
 }
+
 void Monster::takeWeapon(Weapon *weapon)
 {
 	if (this->weapon != NULL)
@@ -90,6 +94,7 @@ void Monster::takeWeapon(Weapon *weapon)
 		weapon->setIsTaken(1);
 	}
 }
+
 bool Monster::canUseWeapon()
 {
 	if (this->weapon == NULL)
@@ -98,6 +103,7 @@ bool Monster::canUseWeapon()
 	}
 	return (rand() % 2) == 0;
 }
+
 bool Monster::isHaveWeapon() const
 {
 	if (weapon != nullptr)
@@ -106,6 +112,7 @@ bool Monster::isHaveWeapon() const
 	}
 	return false;
 }
+
 void Monster::returnWeapon()
 {
 	if (weapon != NULL && weapon->getIsTaken())
@@ -113,13 +120,15 @@ void Monster::returnWeapon()
 		weapon->setIsTaken(0);
 		weapon = NULL;
 	}
-}/*
+}
+/*
 void Monster::restoreWeapon(istream& in)
 {
 	Weapon* weapon = new Weapon;
 	weapon->read(in);
 	this->takeWeapon(weapon);
 }*/
+
 void Monster::takeShield(Shield* shield)
 {
 	if (this->shield != NULL)
@@ -132,6 +141,7 @@ void Monster::takeShield(Shield* shield)
 		shield->setIsTaken(1);
 	}
 }
+
 bool Monster::canUseShield()
 {
 	if (this->shield == NULL)
@@ -170,30 +180,37 @@ const int Monster::getHealth()
 {
 	return this->health;
 }
+
 const int Monster::getAttackPower()
 {
 	return this->attackPower;
 }
+
 const int Monster::getArmor()
 {
 	return this->armor;
 }
+
 const char* Monster::getName()
 {
 	return this->name;
 }
+
 Weapon * Monster::getWeapon()
 {
 	return weapon;
 }
+
 Shield * Monster::getShield()
 {
 	return shield;
 }
+
 const string Monster::getType()
 {
 	return "Monster";
 }
+
 Monster* Monster::factory(string type)
 {
 	if (type == "Monster")
@@ -218,6 +235,7 @@ Monster* Monster::factory(string type)
 	}
 	return nullptr;
 }
+
 void Monster::read(istream & in)
 {
 	int health, attackPower, armor;
@@ -226,6 +244,7 @@ void Monster::read(istream & in)
 	setAttackPower(attackPower);
 	setArmor(armor);
 }
+
 void Monster::save(ostream & out)
 {
 	out << getType() << " ";
@@ -260,10 +279,6 @@ Monster* Monster::fight(Monster &opponent)
 		int opponentHealth;
 		while (this->isAlive())
 		{
-			if (countMissHits == 10)
-			{
-				return nullptr;
-			}
 			thisHealth = this->getHealth();
 			opponentHealth = opponent.getHealth();
 			this->hit(opponent);
@@ -271,10 +286,17 @@ Monster* Monster::fight(Monster &opponent)
 			{
 				opponent.hit(*this);
 			}
-			else return (this);
+			else
+			{
+				return (this);
+			}
 			if (thisHealth == this->getHealth() && opponentHealth == opponent.getHealth())
 			{
 				countMissHits++;
+				if (countMissHits == 10)
+				{
+					return nullptr;
+				}
 			}
 		}
 	}

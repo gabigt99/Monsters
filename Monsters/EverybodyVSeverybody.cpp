@@ -19,15 +19,6 @@ vector<Monster*> EverybodyVSeverybody::startFight(vector<Monster*> monsters, boo
 	return winners;
 }
 
-void EverybodyVSeverybody::makeFighterWinnsCounter()
-{
-	for (unsigned int i = 0; i < fighters.size(); i++)
-	{
-		FighterWins fighter(fighters[i]);
-		fighersWithWins.push_back(fighter);
-	}
-}
-
 void EverybodyVSeverybody::getRound()
 {
 	cout << "==========ROUND===============" << endl;//за удобство, иначе не трябва да го има
@@ -48,12 +39,49 @@ const string EverybodyVSeverybody::getType()
 	return "EverybodyVSeverybody";
 }
 
+void EverybodyVSeverybody::makeFighterWinnsCounter()
+{
+	for (unsigned int i = 0; i < fighters.size(); i++)
+	{
+		FighterWins fighter(fighters[i]);
+		fighersWithWins.push_back(fighter);
+	}
+}
+
+void EverybodyVSeverybody::fight(bool restoreLife, ostream * outHistory)
+{
+	for (unsigned int i = 0; i < pairs.size(); i++)
+	{
+		pairs[i].execute(restoreLife);
+		addWinner(i);
+		saveInHistory(outHistory, i);
+	}
+}
+
 void EverybodyVSeverybody::addWinner(int index)
 {
 	if (pairs[index].executed == true && pairs[index].getWinner() != nullptr)
 	{
 		Monster* winner = pairs[index].getWinner();
 		winners.push_back(winner);
+	}
+}
+
+void EverybodyVSeverybody::saveInHistory(ostream * outHistory, size_t numberOfPair)
+{
+	if (outHistory != nullptr)
+	{
+		*outHistory << "Pair " << numberOfPair << " is: " 
+			<< pairs[numberOfPair].firstFighter->getName() << " & "
+			<< pairs[numberOfPair].secondFighter->getName() << endl;
+		if (pairs[numberOfPair].getWinner() == nullptr)
+		{
+			*outHistory << "Winner is: " << "No one" << endl;
+		}
+		else
+		{
+			*outHistory << "Winner is: " << winners.back()->getName() << endl;
+		}
 	}
 }
 
@@ -92,30 +120,6 @@ void EverybodyVSeverybody::winnersWithMostWins()
 		if (fighersWithWins[i].returnWins() == bestScore)
 		{
 			winners.push_back(fighersWithWins[i].fighter);
-		}
-	}
-}
-
-void EverybodyVSeverybody::fight(bool restoreLife, ostream * outHistory)
-{
-	for (unsigned int i = 0; i < pairs.size(); i++)
-	{
-		if (outHistory != nullptr)
-		{
-			*outHistory << "Pair " << i << " is: " << pairs[i].firstFighter->getName() << " & " << pairs[i].secondFighter->getName() << endl;
-		}
-		pairs[i].execute(restoreLife);
-		addWinner(i);
-		if (outHistory != nullptr)
-		{
-			if (pairs[i].getWinner() == nullptr)
-			{
-				*outHistory << "Winner is: " << "No one" << endl;
-			}
-			else
-			{
-				*outHistory << "Winner is: " << winners.back()->getName() << endl;
-			}
 		}
 	}
 }

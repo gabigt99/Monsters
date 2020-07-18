@@ -2,6 +2,13 @@
 #include "pch.h"
 #include "Weapon.h"
 
+Weapon::Weapon(int power, int dupability)
+{
+	setPower(power);
+	setDupability(dupability);
+	isTaken = false;
+}
+
 void Weapon::setPower(int power)
 {
 	if (power < 0)

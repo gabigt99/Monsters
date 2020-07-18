@@ -10,12 +10,7 @@ using namespace std;
 class Weapon
 {
 public:
-	Weapon(int power = 0, int dupability = 0) //:power(p), dupability(d) {};
-	{
-		setPower(power);
-		setDupability(dupability);
-		isTaken = false;
-	}
+	Weapon(int power = 0, int dupability = 0); //:power(p), dupability(d) {};
 	void setPower(int power);
 	void setDupability(int dupability);
 	void setIsTaken(bool isTaken);

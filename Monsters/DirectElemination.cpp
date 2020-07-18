@@ -103,40 +103,42 @@ void DirectElemination::fight(bool restoreLife, ostream * outHistory, int number
 	}
 	for (unsigned int i = 0; i < pairs.size(); i++)
 	{
-		if (outHistory != nullptr)
-		{
-			*outHistory << "Pair " << i << " is: " << pairs[i].firstFighter->getName() << " & " << pairs[i].secondFighter->getName() << endl;
-		}
 		pairs[i].execute(restoreLife);
 		addWinner(i);
-		if (outHistory != nullptr)
-		{
-			*outHistory << "Winner is: " << winners.back()->getName() << endl;
-		}
+		saveInHistory(outHistory, i);
 	}
 }
 
-
-
-void DirectElemination::addWinner(int i)
+void DirectElemination::addWinner(int index)
 {
-	if (pairs[i].executed == true)
+	if (pairs[index].executed == true)
 	{
-		Monster* winner = pairs[i].getWinner();
+		Monster* winner = pairs[index].getWinner();
 		if (winner == nullptr)
 		{
 			if (rand() % 2 == 0)
 			{
-				winners.push_back(pairs[i].firstFighter);
+				winners.push_back(pairs[index].firstFighter);
 			}
 			else
 			{
-				winners.push_back(pairs[i].secondFighter);
+				winners.push_back(pairs[index].secondFighter);
 			}
 		}
 		else
 		{
 			winners.push_back(winner);
 		}
+	}
+}
+
+void DirectElemination::saveInHistory(ostream * outHistory, size_t numberOfPair)
+{
+	if (outHistory != nullptr)
+	{
+		*outHistory << "Pair " << numberOfPair << " is: "
+			<< pairs[numberOfPair].firstFighter->getName() << " & " 
+			<< pairs[numberOfPair].secondFighter->getName() << endl;
+		*outHistory << "Winner is: " << winners.back()->getName() << endl;
 	}
 }

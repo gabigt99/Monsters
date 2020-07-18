@@ -2,6 +2,13 @@
 #include"pch.h"
 #include "Shield.h"
 
+Shield::Shield(int protection, int dupability)
+{
+	setProtection(protection);
+	setDupability(dupability);
+	isTaken = false;
+}
+
 void Shield::setProtection(int protection)
 {
 	if (protection < 0)

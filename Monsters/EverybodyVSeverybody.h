@@ -10,17 +10,18 @@ class EverybodyVSeverybody : public Schema
 {
 public:
 	virtual vector<Monster*> startFight(vector<Monster*> monsters, bool restoreLife, ostream* outHistory);
-	void makeFighterWinnsCounter();
 	virtual void getRound();
 	virtual const string getType();
-	virtual void addWinner(int i);
-	void addWins();
-	int mostWins();
-	void winnersWithMostWins();
 private:
 	vector<Monster*> fighters;
 	vector<Monster*> winners;
 	vector<FightingPair> pairs;
 	vector<FighterWins> fighersWithWins;
+	void makeFighterWinnsCounter();
 	void fight(bool restoreLife, ostream* outHistory);
+	virtual void addWinner(int index);
+	virtual void saveInHistory(ostream* outHistory, size_t numberOfPair);
+	void addWins();
+	int mostWins();
+	void winnersWithMostWins();
 };

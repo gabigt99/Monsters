@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "Dragon.h"
+
 const int Dragon::getAttackPower()
 {
 	if (rand() % 8 == 0)
@@ -9,6 +10,7 @@ const int Dragon::getAttackPower()
 	}
 	return this->Monster::getAttackPower();
 }
+
 const int Dragon::getArmor()
 {
 	if (rand() % 8 == 0)
@@ -27,10 +29,12 @@ bool Dragon::canUseWeapon()
 {
 	return 0;
 }
+
 bool Dragon::canUseShield()
 {
 	return 0;
 }
+
 Dragon::~Dragon()
 {
 

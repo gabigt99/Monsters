@@ -14,5 +14,6 @@ public:
 	virtual const string getType() = 0;
 	virtual vector<Monster*> startFight(vector<Monster*> monsters, bool restoreLife, ostream* outHistory) = 0;
 private:
-	virtual void addWinner(int i) = 0;
+	virtual void addWinner(int index) = 0;
+	virtual void saveInHistory(ostream* outHistory, size_t numberOfPair) = 0;
 };
